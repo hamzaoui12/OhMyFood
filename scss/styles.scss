@@ -24,6 +24,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 18px 0;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.18);
     
     .fa-location-dot {
       display: flex;
@@ -56,6 +57,9 @@ header {
 .fonctionnement {
   background-color: white;
   margin: 15px 20px;
+  .title{
+    margin: 40px 0px 22px 1px;
+  }
 }
 
 .fonctionnement-buttons {
@@ -77,19 +81,19 @@ header {
   }
 
   button {
-    padding: 25px 9px;
+    padding: 25px 30px;
     position: relative;
     border: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     border-radius: 20px;
     margin-bottom: 10px;
     background-color: $bg-color;
     box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.18);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 
     &:hover {
       color: $main-color;
@@ -142,7 +146,7 @@ header {
     justify-content: space-between;
 
     .restaurants-card-text {
-      margin-left: 10px;
+      margin-left: 20px;
 
       h2 {
         font-size: 20px;
@@ -185,6 +189,18 @@ header {
   .coeur1 {
     opacity: 0;
   }
+}
+
+.heart-checkbox {
+  display: none;
+}
+
+.heart-checkbox:checked+.coeur {
+  opacity: 1;
+}
+
+.heart-checkbox:checked~.coeur1 {
+  opacity: 0;
 }
 
 .coeur {
@@ -275,6 +291,7 @@ footer {
     button {
       padding: 20px 60px 20px 25px;
       font-size: 0.9rem;
+      gap: 30px;
     }
   }
 

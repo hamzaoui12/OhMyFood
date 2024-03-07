@@ -16,7 +16,7 @@ header {
   .header-logo {
     display: flex;
     justify-content: center;
-    
+
     .logo-title {
       font-size: 1.8rem;
     }
@@ -38,7 +38,6 @@ header {
 }
 
 .menu {
- 
   display: flex;
   justify-content: center;
   .menu-conteneur {
@@ -54,10 +53,10 @@ header {
     margin-bottom: 25px;
     position: relative;
   }
- 
 }
 
-.coeur1, .coeur {
+.coeur1,
+.coeur {
   font-size: 1.5rem;
   position: absolute;
   right: 25px;
@@ -74,7 +73,7 @@ header {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
   }
   span {
     text-underline-offset: 0.5rem;
@@ -109,11 +108,11 @@ header {
         transform: translateX(0px);
         cursor: pointer;
       }
-    .menu-prix {
-      font-size: 0.9rem;
-      font-weight: bold;
-      margin-left: 0;
-    }
+      .menu-prix {
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin-left: 0;
+      }
     }
     .btn-conteneur {
       width: 100%;
@@ -133,6 +132,10 @@ header {
       width: 80%;
     }
 
+    .menu-check {
+      display: none;
+    }
+
     .menu-ajouter {
       display: flex;
       justify-content: center;
@@ -140,14 +143,25 @@ header {
       width: 0;
       transform: translateX(70px);
       background-color: #99e2d0;
-      border-radius: 0 25px 25px 0px;
+      border-radius: 0 25px 25px 0;
       transition: 400ms ease all;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      height: 100%;
+
       .fa-check {
-        color: $tertiary-color;
+        color: #99e2d0;
         background-color: white;
         padding: 5px;
         border-radius: 50%;
       }
+    }
+
+    .btn:hover .menu-ajouter,
+    .menu-check:checked + .menu-ajouter {
+      width: 70px;
+      transform: translateX(0);
     }
   }
 }
@@ -161,7 +175,6 @@ header {
     font-size: 1.2rem;
     padding: 15px 50px 15px 50px;
     z-index: 0;
-    
   }
 }
 
@@ -182,14 +195,14 @@ header {
     align-items: center;
     padding-top: 40px;
     .footer-conteneur {
-        flex-direction: row;
-        gap: 10px;
+      flex-direction: row;
+      gap: 10px;
     }
     .footer_logo {
-        margin: 20px 30px 32px 70px;
+      margin: 20px 30px 32px 70px;
     }
     .spaced {
-        margin-right: 60px;
+      margin-right: 60px;
     }
-}
+  }
 }
