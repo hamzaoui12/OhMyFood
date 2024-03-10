@@ -1,8 +1,7 @@
-
-$main-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$bg-color: #F6F6F6;
+$main-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$bg-color: #f6f6f6;
 $footer-color: #353535;
 
 * {
@@ -12,33 +11,37 @@ $footer-color: #353535;
   margin: 0;
 }
 
-@mixin logo-title{
-    font-family: 'Shrikhand', serif;
-    font-weight: 100;
+@mixin logo-title {
+  font-family: "Shrikhand", serif;
+  font-weight: 100;
 }
 
-@mixin cta{
-    background: linear-gradient(193deg, $main-color -11.44%, $secondary-color 123.93%);
-    color: white;
-    font-size: 1rem;
-    padding: 14px 15px 14px 15px;
-    border: 0px;
-    border-radius: 25px;
-    margin-bottom: 30px;
-    box-shadow: 4px 5px 10px 0px rgba(0, 0, 0, 0.25);
+@mixin cta {
+  background: linear-gradient(
+    193deg,
+    $main-color -11.44%,
+    $secondary-color 123.93%
+  );
+  color: white;
+  font-size: 1rem;
+  padding: 14px 15px 14px 15px;
+  border: 0px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  box-shadow: 4px 5px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 @keyframes heart {
-    0% {
-      opacity: 0.1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
+  0% {
+    opacity: 0.1;
   }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes chargement {
   from {

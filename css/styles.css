@@ -76,21 +76,26 @@ header .header-logo {
   display: flex;
   justify-content: center;
   margin-bottom: 2px;
-  padding: 10px 0;
+  padding: 20px 0;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.18);
 }
 header .header-logo img {
   width: 175px;
   height: 35px;
 }
-header .header-localisation {
+
+.localisation {
+  flex-direction: column;
+  align-items: center;
+}
+.localisation .header-localisation {
   background-color: #eaeaea;
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 18px 0;
-  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.18);
 }
-header .header-localisation .fa-location-dot {
+.localisation .header-localisation .fa-location-dot {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,9 +108,15 @@ header .header-localisation .fa-location-dot {
   flex-direction: column;
   background-color: #F6F6F6;
 }
-.introduction h1, .introduction p {
+.introduction p {
   text-align: center;
   margin: 25px 20px 5px 20px;
+  font-size: 0.8rem;
+}
+.introduction h1 {
+  text-align: center;
+  margin: 25px 20px 5px 20px;
+  font-size: 1.8rem;
 }
 .introduction .introduction-cta {
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -120,6 +131,13 @@ header .header-localisation .fa-location-dot {
   margin-bottom: 55px;
   cursor: pointer;
 }
+.introduction .introduction-cta:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 .fonctionnement {
   background-color: white;
@@ -128,13 +146,12 @@ header .header-localisation .fa-location-dot {
 .fonctionnement .title {
   margin: 40px 0px 22px 1px;
 }
-
-.fonctionnement-buttons {
+.fonctionnement .fonctionnement-buttons {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.fonctionnement-buttons .icone {
+.fonctionnement .fonctionnement-buttons .icone {
   border: solid #9356DC;
   border-radius: 50%;
   width: 20px;
@@ -146,7 +163,7 @@ header .header-localisation .fa-location-dot {
   left: -10px;
   font-weight: 300;
 }
-.fonctionnement-buttons button {
+.fonctionnement .fonctionnement-buttons button {
   padding: 25px 30px;
   position: relative;
   border: none;
@@ -161,7 +178,7 @@ header .header-localisation .fa-location-dot {
   align-items: center;
   gap: 20px;
 }
-.fonctionnement-buttons button:hover {
+.fonctionnement .fonctionnement-buttons button:hover {
   color: #9356DC;
   cursor: pointer;
 }
@@ -174,19 +191,18 @@ header .header-localisation .fa-location-dot {
 .restaurants a:visited {
   color: black;
 }
-
-.restaurants-div {
+.restaurants .restaurants-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
-.restaurants-div a {
+.restaurants .restaurants-div a {
   width: 100%;
   height: 70%;
   text-decoration: none;
 }
-.restaurants-div .restaurants-card {
+.restaurants .restaurants-div .restaurants-card {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -195,35 +211,35 @@ header .header-localisation .fa-location-dot {
   border-radius: 25px;
   position: relative;
 }
-.restaurants-div .restaurants-card img {
+.restaurants .restaurants-div .restaurants-card img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 25px 25px 0 0;
 }
-.restaurants-div .restaurants-card-content {
+.restaurants .restaurants-div .restaurants-card-content {
   display: flex;
   justify-content: space-between;
 }
-.restaurants-div .restaurants-card-content .restaurants-card-text {
+.restaurants .restaurants-div .restaurants-card-content .restaurants-card-text {
   margin-left: 20px;
 }
-.restaurants-div .restaurants-card-content .restaurants-card-text h2 {
+.restaurants .restaurants-div .restaurants-card-content .restaurants-card-text h2 {
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 0;
 }
-.restaurants-div .restaurants-card-content .restaurants-card-text p {
+.restaurants .restaurants-div .restaurants-card-content .restaurants-card-text p {
   margin-top: 2px;
 }
-.restaurants-div .restaurants-card-content .fa-heart {
+.restaurants .restaurants-div .restaurants-card-content .fa-heart {
   font-size: 1.5rem;
   margin: 20px 20px 0 0;
 }
-.restaurants-div .restaurants-card-content .fa-heart:hover {
+.restaurants .restaurants-div .restaurants-card-content .fa-heart:hover {
   background-color: #9356DC;
 }
-.restaurants-div .nouveau {
+.restaurants .restaurants-div .nouveau {
   background-color: #000000;
   color: #dcdcdc;
   padding: 7px 13px;
@@ -299,6 +315,23 @@ footer .footer_link .fa-solid {
   * {
     font-size: 1.1rem;
   }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .header-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+    padding: 20px 0;
+    box-shadow: none;
+  }
+  header .header-logo img {
+    width: 175px;
+    height: 35px;
+  }
   .fonctionnement {
     display: flex;
     flex-direction: column;
@@ -315,23 +348,20 @@ footer .footer_link .fa-solid {
     flex-direction: column;
     justify-content: flex-start;
   }
-  .title {
-    padding-left: 0px;
-  }
-  .fonctionnement-buttons {
+  .fonctionnement .fonctionnement-buttons {
     flex-direction: row;
     justify-content: center;
     gap: 25px;
     margin-top: 25px;
     margin-bottom: 25px;
   }
-  .fonctionnement-buttons .icone {
+  .fonctionnement .fonctionnement-buttons .icone {
     left: -10px;
   }
-  .fonctionnement-buttons button {
-    padding: 20px 60px 20px 25px;
+  .fonctionnement .fonctionnement-buttons button {
+    padding: 30px 70px 30px 40px;
     font-size: 0.9rem;
-    gap: 30px;
+    gap: 40px;
   }
   .restaurants {
     display: flex;
@@ -344,21 +374,21 @@ footer .footer_link .fa-solid {
     align-items: flex-start;
   }
   .restaurants .title {
-    padding-left: 15px;
-    margin-bottom: 25px;
+    padding-left: 35px;
+    margin-bottom: 30px;
   }
-  .restaurants-div {
+  .restaurants .restaurants-div {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 80px;
   }
-  .restaurants-div .restaurants-card {
+  .restaurants .restaurants-div .restaurants-card {
     width: 40%;
     height: 250px;
     margin-bottom: -40px;
   }
-  .restaurants-div a {
+  .restaurants .restaurants-div a {
     width: 100%;
     height: 70%;
   }
