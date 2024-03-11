@@ -45,7 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #F6F6F6;
+  background: #f6f6f6;
   animation: chargement-transition 2s forwards;
 }
 .loader::after {
@@ -53,7 +53,7 @@
   width: 75px;
   height: 75px;
   border: 15px solid lightgray;
-  border-top-color: #9356DC;
+  border-top-color: #9356dc;
   border-radius: 50%;
   animation: chargement 0.75s ease 2;
 }
@@ -109,7 +109,7 @@ header .header-blank {
 }
 .menu .menu-conteneur {
   width: 100%;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding: 40px 10px 20px 10px;
   border-radius: 50px 50px 0px 0px;
   box-sizing: border-box;
@@ -130,7 +130,7 @@ header .header-blank {
 }
 
 .menu-etape {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   margin-bottom: 40px;
 }
 .menu-etape p {
@@ -144,7 +144,7 @@ header .header-blank {
 }
 .menu-etape span {
   text-underline-offset: 0.5rem;
-  text-decoration: underline #99E2D0 3px;
+  text-decoration: underline #99e2d0 3px;
 }
 .menu-etape h3 {
   width: 100%;
@@ -233,7 +233,7 @@ header .header-blank {
   justify-content: center;
 }
 .cta-conteneur .cta {
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   color: white;
   font-size: 1rem;
   padding: 14px 15px 14px 15px;
