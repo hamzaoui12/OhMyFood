@@ -66,6 +66,10 @@ h1 {
   margin: 25px 0px 20px 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   display: flex;
   align-items: center;
