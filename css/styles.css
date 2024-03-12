@@ -105,6 +105,11 @@ header .header-logo img {
   align-items: center;
   margin-right: 8px;
 }
+.localisation .header-localisation h1 {
+  font-size: 1.1rem;
+  font-weight: 100;
+  margin: 0;
+}
 
 .introduction {
   display: flex;
@@ -167,7 +172,7 @@ header .header-logo img {
   left: -10px;
   font-weight: 300;
 }
-.fonctionnement .fonctionnement-buttons button {
+.fonctionnement .fonctionnement-buttons a {
   padding: 25px 30px;
   position: relative;
   border: none;
@@ -177,12 +182,15 @@ header .header-logo img {
   margin-bottom: 10px;
   background-color: #f6f6f6;
   box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  color: black;
   display: flex;
+  gap: 20px;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  white-space: nowrap;
 }
-.fonctionnement .fonctionnement-buttons button:hover {
+.fonctionnement .fonctionnement-buttons a:hover {
   color: #9356dc;
   cursor: pointer;
 }
