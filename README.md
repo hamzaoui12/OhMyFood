@@ -10,12 +10,12 @@
 ## Visualisation de la page 
 Pour tester simplement & rapidement, veuillez préférer visiter la démo en ligne : [ohmyfood.com](https://hamzaoui12.github.io/OhMyFood/)
 
-## Utilisation
+## Utilisation du code 
 - Cloner le projet
 ```git clone https://github.com/hamzaoui12/OhMyFood.git```
 
 - Installer les dépendances
-```terminalnpm install```
+```npm install```
 
 - Lancer le projet avec
  ```npm run watch```
