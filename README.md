@@ -7,9 +7,10 @@
 - [NPM](https://www.npmjs.com/) 
 - [Sass](https://sass-lang.com/) 
 
-## Utilisation
+## Visualisation de la page 
 Pour tester simplement & rapidement, veuillez préférer visiter la démo en ligne : [ohmyfood.com](https://hamzaoui12.github.io/OhMyFood/)
 
+## Utilisation
 - Cloner le projet
 ```git clone https://github.com/hamzaoui12/OhMyFood.git```
 
