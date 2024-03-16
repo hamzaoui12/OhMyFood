@@ -38,9 +38,22 @@ header {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .menu {
   display: flex;
   justify-content: center;
+
   .menu-conteneur {
     width: 100%;
     background-color: $bg-color;
@@ -48,11 +61,143 @@ header {
     border-radius: 50px 50px 0px 0px;
     box-sizing: border-box;
   }
+
   .menu-introduction {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
     position: relative;
+  }
+
+  .menu-etape {
+    background-color: $bg-color;
+    margin-bottom: 40px;
+
+    p {
+      font-size: 0.85rem;
+      font-size: 0.85rem;
+      text-overflow: ellipsis;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    span {
+      text-underline-offset: 0.5rem;
+      text-decoration: underline $tertiary-color 3px;
+    }
+
+    h3 {
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-weight: 400;
+    }
+
+    .menu-plats {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+
+      .btn {
+        animation: fadeIn 0.8s ease-out forwards;
+        opacity: 0;
+        display: flex;
+        width: 100%;
+        border: none;
+        border-radius: 25px;
+        overflow: hidden;
+        position: relative;
+        background-color: white;
+        box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+
+        &:hover .menu-ajouter {
+          width: 70px;
+          transform: translateX(0px);
+          cursor: pointer;
+        }
+
+        .menu-prix {
+          font-size: 0.9rem;
+          font-weight: bold;
+          margin-left: 0;
+        }
+
+        &:nth-child(1) {
+          animation-delay: 0.1s;
+        }
+
+        &:nth-child(2) {
+          animation-delay: 0.3s;
+        }
+
+        &:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+
+        &:nth-child(4) {
+          animation-delay: 0.5s;
+        }
+      }
+
+      .btn-conteneur {
+        width: 100%;
+        min-width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding: 15px;
+        box-sizing: border-box;
+        transition: 400ms ease all;
+      }
+
+      .btn-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+        width: 80%;
+      }
+
+      .menu-check {
+        display: none;
+      }
+
+      .menu-ajouter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0;
+        transform: translateX(70px);
+        background-color: #99e2d0;
+        border-radius: 0 25px 25px 0;
+        transition: 400ms ease all;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        height: 100%;
+
+        .fa-check {
+          color: #99e2d0;
+          background-color: white;
+          padding: 5px;
+          border-radius: 50%;
+        }
+      }
+
+      .btn:hover .menu-ajouter,
+      .menu-check:checked + .menu-ajouter {
+        width: 70px;
+        transform: translateX(0);
+      }
+    }
   }
 }
 
@@ -62,109 +207,6 @@ header {
   position: absolute;
   right: 25px;
   top: 5px;
-}
-
-.menu-etape {
-  background-color: $bg-color;
-  margin-bottom: 40px;
-  p {
-    font-size: 0.85rem;
-    font-size: 0.85rem;
-    text-overflow: ellipsis;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  span {
-    text-underline-offset: 0.5rem;
-    text-decoration: underline $tertiary-color 3px;
-  }
-  h3 {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  h2 {
-    margin-bottom: 15px;
-    font-weight: 400;
-  }
-  .menu-plats {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-    .btn {
-      display: flex;
-      width: 100%;
-      border: none;
-      border-radius: 25px;
-      overflow: hidden;
-      position: relative;
-      background-color: white;
-      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
-      &:hover .menu-ajouter {
-        width: 70px;
-        transform: translateX(0px);
-        cursor: pointer;
-      }
-      .menu-prix {
-        font-size: 0.9rem;
-        font-weight: bold;
-        margin-left: 0;
-      }
-    }
-    .btn-conteneur {
-      width: 100%;
-      min-width: 50%;
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      padding: 15px;
-      box-sizing: border-box;
-      transition: 400ms ease all;
-    }
-    .btn-text {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      align-items: flex-start;
-      width: 80%;
-    }
-
-    .menu-check {
-      display: none;
-    }
-
-    .menu-ajouter {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 0;
-      transform: translateX(70px);
-      background-color: #99e2d0;
-      border-radius: 0 25px 25px 0;
-      transition: 400ms ease all;
-      cursor: pointer;
-      position: absolute;
-      right: 0;
-      height: 100%;
-
-      .fa-check {
-        color: #99e2d0;
-        background-color: white;
-        padding: 5px;
-        border-radius: 50%;
-      }
-    }
-
-    .btn:hover .menu-ajouter,
-    .menu-check:checked + .menu-ajouter {
-      width: 70px;
-      transform: translateX(0);
-    }
-  }
 }
 
 .cta-conteneur {

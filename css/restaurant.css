@@ -107,6 +107,16 @@ header .header-blank {
   object-fit: cover;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .menu {
   display: flex;
   justify-content: center;
@@ -124,20 +134,11 @@ header .header-blank {
   margin-bottom: 25px;
   position: relative;
 }
-
-.coeur1,
-.coeur {
-  font-size: 1.5rem;
-  position: absolute;
-  right: 25px;
-  top: 5px;
-}
-
-.menu-etape {
+.menu .menu-etape {
   background-color: #f6f6f6;
   margin-bottom: 40px;
 }
-.menu-etape p {
+.menu .menu-etape p {
   font-size: 0.85rem;
   font-size: 0.85rem;
   text-overflow: ellipsis;
@@ -146,27 +147,29 @@ header .header-blank {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-etape span {
+.menu .menu-etape span {
   text-underline-offset: 0.5rem;
   text-decoration: underline #99e2d0 3px;
 }
-.menu-etape h3 {
+.menu .menu-etape h3 {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-etape h2 {
+.menu .menu-etape h2 {
   margin-bottom: 15px;
   font-weight: 400;
 }
-.menu-etape .menu-plats {
+.menu .menu-etape .menu-plats {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-top: 20px;
 }
-.menu-etape .menu-plats .btn {
+.menu .menu-etape .menu-plats .btn {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
   display: flex;
   width: 100%;
   border: none;
@@ -176,17 +179,29 @@ header .header-blank {
   background-color: white;
   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
 }
-.menu-etape .menu-plats .btn:hover .menu-ajouter {
+.menu .menu-etape .menu-plats .btn:hover .menu-ajouter {
   width: 70px;
   transform: translateX(0px);
   cursor: pointer;
 }
-.menu-etape .menu-plats .btn .menu-prix {
+.menu .menu-etape .menu-plats .btn .menu-prix {
   font-size: 0.9rem;
   font-weight: bold;
   margin-left: 0;
 }
-.menu-etape .menu-plats .btn-conteneur {
+.menu .menu-etape .menu-plats .btn:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.menu .menu-etape .menu-plats .btn:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.menu .menu-etape .menu-plats .btn:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.menu .menu-etape .menu-plats .btn:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.menu .menu-etape .menu-plats .btn-conteneur {
   width: 100%;
   min-width: 50%;
   display: flex;
@@ -196,17 +211,17 @@ header .header-blank {
   box-sizing: border-box;
   transition: 400ms ease all;
 }
-.menu-etape .menu-plats .btn-text {
+.menu .menu-etape .menu-plats .btn-text {
   display: flex;
   flex-direction: column;
   gap: 5px;
   align-items: flex-start;
   width: 80%;
 }
-.menu-etape .menu-plats .menu-check {
+.menu .menu-etape .menu-plats .menu-check {
   display: none;
 }
-.menu-etape .menu-plats .menu-ajouter {
+.menu .menu-etape .menu-plats .menu-ajouter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,16 +235,24 @@ header .header-blank {
   right: 0;
   height: 100%;
 }
-.menu-etape .menu-plats .menu-ajouter .fa-check {
+.menu .menu-etape .menu-plats .menu-ajouter .fa-check {
   color: #99e2d0;
   background-color: white;
   padding: 5px;
   border-radius: 50%;
 }
-.menu-etape .menu-plats .btn:hover .menu-ajouter,
-.menu-etape .menu-plats .menu-check:checked + .menu-ajouter {
+.menu .menu-etape .menu-plats .btn:hover .menu-ajouter,
+.menu .menu-etape .menu-plats .menu-check:checked + .menu-ajouter {
   width: 70px;
   transform: translateX(0);
+}
+
+.coeur1,
+.coeur {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 25px;
+  top: 5px;
 }
 
 .cta-conteneur {
