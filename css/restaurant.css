@@ -120,6 +120,7 @@ header .header-blank {
 .menu {
   display: flex;
   justify-content: center;
+  font-family: Shrikhand;
 }
 .menu .menu-conteneur {
   width: 100%;
